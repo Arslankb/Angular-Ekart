@@ -1,0 +1,50 @@
+<div class="ekart--product--container">
+    <app-search (searchTextChanged) = "setSearchText($event)"></app-search>
+    <app-product-list [searchText] = "searchText" #productListComponent></app-product-list>
+    <app-product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></app-product-detail>
+    
+    <div class="ekart-featured-product">
+        <div class="ekart-featured-product-heading">
+            <h2>Latest Arrival in Popular Brands.</h2>
+        </div>
+
+       <app-featured-brands>
+        <h3 class="title">New Arrivals in Nike</h3>
+        <button class="call-to-action">Show New Arrival in Nike</button>
+       </app-featured-brands>
+       <app-featured-brands>
+        <h3 class="title">New Arrivals in Gucci</h3>
+        <button class="call-to-action">Show New Arrival in Gucci</button>
+       </app-featured-brands>
+       <app-featured-brands>
+        <h3 class="title">New Arrivals in Nike</h3>
+        <button class="call-to-action">Show New Arrival in Nike</button>
+       </app-featured-brands>
+
+
+    </div>
+    
+    <!-- Property Binding -->
+    <!-- <img [src]="product.pImage">   -->
+
+    <!-- String Interpolation -->
+    <!-- <p>Name: {{product.name}}</p>
+    <p>Price: ${{product.price}}</p>
+    <p>Color: {{product.color}}</p> -->
+
+    <!-- Property Binding -->
+    <!-- <input (input)="onNameChange($event)"><br>
+    <p>name={{name}}</p> -->
+
+    <!-- <button (click)="decrementCartValue()">-</button>
+    <span>{{addToCart}}</span>
+    <button (click)="incrementCartValue()">+</button> -->
+
+    <!-- ======= ngFor Example ========= -->
+
+    <!-- <div *ngFor="let item of listOfString">
+        <p>Current element of array is: {{item}}</p>
+    </div> -->
+
+    
+</div>
